@@ -5,6 +5,4 @@ date:   2015-10-09 15:39:40
 preview: assets/images/finland.jpg
 ---
 
-![Picture 1](assets/images/finland.jpg)
-
 2018 August
