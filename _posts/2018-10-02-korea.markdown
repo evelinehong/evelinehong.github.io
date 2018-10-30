@@ -1,9 +1,7 @@
 ---
 layout: post
 title:  "Yining AT Korea"
-preview: assets/images/korea.jpg
+preview: /assets/images/korea.jpg
 ---
-
-![Picture 1](assets/images/korea.jpg)
 
 2017 January-February

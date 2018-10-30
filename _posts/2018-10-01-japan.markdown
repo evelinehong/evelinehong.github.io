@@ -1,9 +1,7 @@
 ---
 layout: post
 title:  "Yining AT Japan"
-preview: assets/images/japan.jpg
+preview: /assets/images/japan.jpg
 ---
-
-![Picture 1](assets/images/japan.jpg)
 
 2018 January-February
