@@ -1,8 +1,7 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2015-10-07 15:39:40
-preview: holder.js/300x300?auto=yes
+title:  "Yining AT Korea"
+preview: assets/images/korea.jpg
 ---
 
 ![Picture 1](holder.js/800x600?auto=yes)

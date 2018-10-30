@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Yining At Japan"
+title:  "Yining AT Japan"
 preview: assets/images/japan.jpg
 ---
 
