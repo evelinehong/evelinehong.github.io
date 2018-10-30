@@ -1,9 +1,9 @@
 # main text of home
-name: Jane Doe
-bio: A Girl who travels the world eating noodles
+name: Yining Hong
+bio: A Girl who travels the world playing the piano
 
 # twitter summary info
-description: A blog about technology and stuff related
+description: A blog about technology and music and stuff related
 
 picture: assets/images/picture.jpg
 
@@ -11,10 +11,9 @@ url: http://koppl.in/violet
 # your url: http://USERNAME.github.io
 
 # if you don't have any of social below, comment the line
-facebook: myfacebook
-twitter: mytwitter
-github: mygithub
-email: me@jane.doe
+
+github: evelinehong
+email: yninghong@gmail.com
 
 gems:
   - jekyll-seo-tag
