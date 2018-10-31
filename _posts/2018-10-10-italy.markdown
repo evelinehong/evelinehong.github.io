@@ -1,0 +1,7 @@
+---
+layout: post
+title:  "Yining AT Italy"
+preview: /assets/images/italy.jpg
+---
+
+2016 August

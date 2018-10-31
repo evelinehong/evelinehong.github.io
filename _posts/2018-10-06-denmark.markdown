@@ -1,0 +1,7 @@
+---
+layout: post
+title:  "Yining AT Denmark"
+preview: /assets/images/denmark.jpg
+---
+
+2017 August
