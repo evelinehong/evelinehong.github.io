@@ -6,6 +6,11 @@
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
+  background: -webkit-linear-gradient(left, #19111f 0%, #2c1e37 100%)
+  background: -moz-linear-gradient(left, #19111f 0%, #2c1e37 100%)
+  background: -o-linear-gradient(left, #19111f 0%, #2c1e37 100%)
+  background: -ms-linear-gradient(left, #19111f 0%, #2c1e37 100%)
+  background: linear-gradient(to right, #19111f 0%, #2c1e37 100%)
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
