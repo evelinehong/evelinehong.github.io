@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Yining AT Korea"
+title:  "Yining AT South Korea"
 preview: /assets/images/korea.jpg
 ---
 
