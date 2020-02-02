@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Yining AT Malaysia"
-preview: /assets/images/malaysia.jpg
+preview: /assets/images/malaysia.jpeg
 ---
 
 2019 July. Get my OW & AOW diving licenses. I'm officially a scuba diver!
