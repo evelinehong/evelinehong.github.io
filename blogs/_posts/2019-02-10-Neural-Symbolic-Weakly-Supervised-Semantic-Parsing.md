@@ -1,5 +1,5 @@
 ---
-title: Weakly Supervised Semantic Parsing
+title: Neural Symbolic Weakly Supervised Semantic Parsing
 published: true
 ---
 
@@ -11,7 +11,7 @@ Literature Survey of CS269
 
 
 
-# [](#header-1)Neural Symbolic Machines: Learning Semantic Parsers on Freebase with Weak Supervision
+# [](#header-1)Paper: Neural Symbolic Machines: Learning Semantic Parsers on Freebase with Weak Supervision
 ACL 2017
 
 _Chen Liang, Jonathan Berant, Quoc Le, Kenneth D. Forbus, Ni Lao_
@@ -34,22 +34,10 @@ Previously, most semantic parsing tasks make use of Seq2Seq model. It was first 
 ![](https://evelinehong.github.io/assets/images/seq2seq.png)
 
 
-### [](#header-3)Header 3
+## [](#header-3)Neural Symbolic Weakly Supervised Semantic Parsing 
 
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
 
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-```
+
 
 #### [](#header-4)Header 4
 
