@@ -5,7 +5,7 @@ published: true
 
 Written by Evelyn(Yining) Hong
 Feb.10th, 2020
-Literature Survey
+Literature Survey of CS269
 
 
 # [](#header-1)Neural Symbolic Machines: Learning Semantic Parsers on Freebase with Weak Supervision
