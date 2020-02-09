@@ -7,16 +7,16 @@ Written by Evelyn(Yining) Hong
 
 Feb.10th, 2020
 
-Literature Survey of CS269
 
 
 # [](#header-1)Neural Symbolic Machines: Learning Semantic Parsers on Freebase with Weak Supervision
 _Chen Liang, Jonathan Berant, Quoc Le, Kenneth D. Forbus, Ni Lao_
+
 [Link to paper](https://arxiv.org/pdf/1611.00020.pdf)
 
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
 
-## [](#header-2)Header 2
+
+## [](#header-2)
 
 > This is a blockquote following a header.
 >
