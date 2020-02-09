@@ -7,6 +7,8 @@ Written by Evelyn(Yining) Hong
 
 Feb.10th, 2020
 
+Literature Survey of CS269
+
 
 
 # [](#header-1)Neural Symbolic Machines: Learning Semantic Parsers on Freebase with Weak Supervision
@@ -27,9 +29,7 @@ Formal representation requires following strict constraints:
 1. Syntax (e.g., correct number of parentheses)
 2. Semantics (e.g., calling function with the right type of arguments)
 
-Previously, most semantic parsing tasks make use of Seq2Seq model. It was first introduced into this area by [(Dong & Lapata, 2016)](https://arxiv.org/pdf/1805.04793.pdf). With a single neural network, it soon beat all the other rule-based semantic parsing techniques. The authors also propose seq2tree because semantic sentences always have hierarchical structure.
-
-### Small image
+Previously, most semantic parsing tasks make use of Seq2Seq model. It was first introduced into this area by [(Dong & Lapata, 2016)](https://arxiv.org/pdf/1805.04793.pdf). With a single neural network, it soon beat all the other rule-based human-written semantic parsing techniques. The authors also propose seq2tree because semantic sentences always have hierarchical structure. Seq2seq structures are easy to build with toolkits.
 
 ![](https://evelinehong.github.io/assets/images/seq2seq.png)
 
