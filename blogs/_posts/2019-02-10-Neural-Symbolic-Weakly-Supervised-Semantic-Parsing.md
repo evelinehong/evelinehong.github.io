@@ -9,8 +9,6 @@ Feb.10th, 2020
 
 Literature Survey of CS269
 
-
-
 # [](#header-1)Paper: Neural Symbolic Machines: Learning Semantic Parsers on Freebase with Weak Supervision
 ACL 2017
 
