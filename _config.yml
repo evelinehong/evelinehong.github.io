@@ -19,5 +19,3 @@ gems:
   - jekyll-seo-tag
 
 exclude: [README.md, Gemfile, Gemfile.lock, _site, Rakefile, travis.sh, vendor]
-
-theme: jekyll-theme-hacker
