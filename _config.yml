@@ -17,5 +17,7 @@ email: yninghong@gmail.com
 
 gems:
   - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-sitemap
 
 exclude: [README.md, Gemfile, Gemfile.lock, _site, Rakefile, travis.sh, vendor]
