@@ -1,10 +1,11 @@
 ---
-title: Neural Symbolic Machines: Learning Semantic Parsers on Freebase with Weak Supervision
+title: Weakly Supervised Semantic Parsing
 published: true
 ---
-_Chen Liang, Jonathan Berant, Quoc Le, Kenneth D. Forbus, Ni Lao_
-[Link to paper](https://arxiv.org/pdf/1611.00020.pdf)
-Blog written by Evelyn(Yining) Hong
+
+Written by Evelyn(Yining) Hong
+Feb.10th, 2020
+Literature Survey
 
 
 # [](#header-1)Neural Symbolic Machines: Learning Semantic Parsers on Freebase with Weak Supervision
