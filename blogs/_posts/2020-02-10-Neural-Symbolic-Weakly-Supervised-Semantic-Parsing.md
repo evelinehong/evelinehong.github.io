@@ -52,7 +52,7 @@ Seq2seq has a good performance. However it also has several disadvantages:
 
 The authors present a manager-programmer-computer framework, in which the generated programs are executed sequentially.
 
-![](https://evelinehong.github.io/assets/images/mpc.png)
+![](https://evelinehong.github.io/assets/images/MPC.png)
 
 
 
