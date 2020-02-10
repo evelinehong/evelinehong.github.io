@@ -54,6 +54,15 @@ The authors present a manager-programmer-computer framework, in which the genera
 
 ![](https://evelinehong.github.io/assets/images/MPC.png)
 
+### [](#header-5) Dataset
+They use the [WebQuestions](https://worksheets.codalab.org/worksheets/0xba659fe363cb46e7a505c5b6a774dc8a) dataset. It contains 5810 questions crawled from Google Suggest API and answered using Amazon MTurk. Specifically, they have 3778 questions for training and 2032 for testing. A question may have multiple answers using Avg.F1 as main evaluation metric.
+
+### [](#header-6) Symbolic Computer
+In fact, their computer -or symbolic part, is similar to Lisp, which is a high-level language with uniform syntax.
+
+It's composed of some predefined functions (F A0...Ak) where F is the function name and A0...Ak are variables (v) or relations (r).
+
+![](https://evelinehong.github.io/assets/images/function.png)
 
 
 
