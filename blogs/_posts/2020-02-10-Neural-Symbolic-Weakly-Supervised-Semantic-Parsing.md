@@ -68,3 +68,13 @@ It's composed of some predefined functions (F A0...Ak) where F is the function n
 They add a key-variable memory to seq2seq model for compositionality. The 'keys' are the outputs of GRUs. The 'variables' are just symbols referencing results in computer: 'R1', 'R2', and maybe used for the computer in the next stage.
 
 ![](https://evelinehong.github.io/assets/images/nsm.png)
+
+### [](#header-8) Training with Iterative Maximum Likelihood & AUGMENTED REINFORCE
+REINFORCE typically adopted by weakly-supervised reinforcement learning tasks suffer from several disadvantages:
+1. They experience "cold start"
+2. Training is slow and get stuck on local optimum. Converging slow.
+3. Search space is large. Rewards are sparse. Progarms that can generate correct answers only count for a small portion of all the programs.
+
+THerefore, they train the model using augmented REINFORCE, in which they first do iterative maximum likelihood(ML) to find pseudo-gold programs with rewards 1. Train the ML part using this pesudo-gold programs as ground truth. Then they add this program to the REINFORCE beam, giving it with a relative large reward. The whole algorithm is presented below:
+
+![](https://evelinehong.github.io/assets/images/algorithm.png)
