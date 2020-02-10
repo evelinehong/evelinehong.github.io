@@ -35,8 +35,13 @@ Previously, most semantic parsing tasks make use of Seq2Seq model. It was first 
 
 
 ## [](#header-3)Neural Symbolic Weakly Supervised Semantic Parsing 
+Recently, the neural-symbolic paradigm has been exten- sively explored in the tasks of semantic parsing. Concretely, for these tasks, neural networks are used to map raw signals (images/questions/instructions) to symbolic representations (scenes/programs/actions), which are then used to perform symbolic reasoning/execution to generate final outputs. Weak supervision in these tasks usually provides pairs of raw inputs and final outputs, with intermediate symbolic representations unobserved.
 
+![](https://evelinehong.github.io/assets/images/supervision.png)
 
+Since symbolic reasoning is non-differentiable, previous methods usually learn the neural-symbolic models by policy gradient methods like REINFORCE. The policy gradient methods generate samples and update the policy based on the generated samples that happen to hit high cumulative rewards. 
+
+![](https://evelinehong.github.io/assets/images/reinforce.png)
 
 
 #### [](#header-4)Header 4
