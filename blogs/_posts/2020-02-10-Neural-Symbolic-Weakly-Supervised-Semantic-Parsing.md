@@ -64,5 +64,7 @@ It's composed of some predefined functions (F A0...Ak) where F is the function n
 
 ![](https://evelinehong.github.io/assets/images/function.png)
 
+### [](#header-7) Seq2seq with Key-Variable Memory
+They add a key-variable memory to seq2seq model for compositionality. The 'keys' are the outputs of GRUs. The 'variables' are just symbols referencing results in computer: 'R1', 'R2', and maybe used for the computer in the next stage.
 
-
+![](https://evelinehong.github.io/assets/images/nsm.png)
