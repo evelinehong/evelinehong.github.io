@@ -35,7 +35,7 @@ Previously, most semantic parsing tasks make use of Seq2Seq model. It was first 
 
 
 ## [](#header-3)Neural Symbolic Weakly Supervised Semantic Parsing 
-Recently, the neural-symbolic paradigm has been exten- sively explored in the tasks of semantic parsing. Concretely, for these tasks, neural networks are used to map raw signals (images/questions/instructions) to symbolic representations (scenes/programs/actions), which are then used to perform symbolic reasoning/execution to generate final outputs. Weak supervision in these tasks usually provides pairs of raw inputs and final outputs, with intermediate symbolic representations unobserved.
+Recently, the neural-symbolic paradigm has been extensively explored in the tasks of semantic parsing. Concretely, for these tasks, neural networks are used to map raw signals (images/questions/instructions) to symbolic representations (scenes/programs/actions), which are then used to perform symbolic reasoning/execution to generate final outputs. Weak supervision in these tasks usually provides pairs of raw inputs and final outputs, with intermediate symbolic representations unobserved.
 
 ![](https://evelinehong.github.io/assets/images/supervision.png)
 
@@ -43,88 +43,17 @@ Since symbolic reasoning is non-differentiable, previous methods usually learn t
 
 ![](https://evelinehong.github.io/assets/images/reinforce.png)
 
+## [](#header-4)Neural Symbolic Machines
+Back to our paper, ["Neural Symbolic Machines: Learning Semantic Parsers on Freebase with Weak Supervision"](https://arxiv.org/pdf/1611.00020.pdf).
 
-#### [](#header-4)Header 4
+Seq2seq has a good performance. However it also has several disadvantages:
+1. Require strong/full supervision. So it is only applied on domains with tiny schemas/vocabs and known semantic annotations.
+2. Lack of integration with the executor. As we said before, intermediate symbolic programs must be executed to get the final answer. In seq2seq, only after the whole program is written can any feedback be generated from the executor. However, usually the search space is large and there's no way to search over the exponentially large hypothesis space given a large schema. So the **entire burden is on the neural network.**
 
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
+The authors present a manager-programmer-computer framework, in which the generated programs are executed sequentially.
 
-##### [](#header-5)Header 5
-
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
-
-###### [](#header-6)Header 6
-
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
-
-### There's a horizontal rule below this.
-
-* * *
-
-### Here is an unordered list:
-
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
-
-### And an ordered list:
-
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
-### Small image
-
-![](https://assets-cdn.github.com/images/icons/emoji/octocat.png)
-
-### Large image
-
-![](https://guides.github.com/activities/hello-world/branching.png)
+![](https://evelinehong.github.io/assets/images/mpc.png)
 
 
-### Definition lists can be used with HTML syntax.
 
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
 
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
-
-```
-The final element.
-```
