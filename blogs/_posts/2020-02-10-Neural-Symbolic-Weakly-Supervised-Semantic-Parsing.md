@@ -78,3 +78,14 @@ REINFORCE typically adopted by weakly-supervised reinforcement learning tasks su
 THerefore, they train the model using augmented REINFORCE, in which they first do iterative maximum likelihood(ML) to find pseudo-gold programs with rewards 1. Train the ML part using this pesudo-gold programs as ground truth. Then they add this program to the REINFORCE beam, giving it with a relative large reward. The whole algorithm is presented below:
 
 ![](https://evelinehong.github.io/assets/images/algorithm.png)
+
+Their performance significantly outperforms others.
+
+## [](#header-9) Related Works
+There are many works focusing on addressing the REINFORCE problems mentioned above. 
+
+One is [Memory Augmented Policy Optimization for Program Synthesis and Semantic Parsing](https://arxiv.org/pdf/1807.02322.pdf) They leverage a memory buffer of promising trajectories to reduce the variance of policy gradient estimate. They express the expected return objective as a weighted sum of two terms: an expectation over the high-reward trajectories inside the memory buffer, and a separate expectation over trajectories outside the buffer.
+
+![](https://evelinehong.github.io/assets/images/mapo.png)
+
+The other one aims to [bridge the gap between Maximum Marginal Likelihood and Reinforcement Learning](https://arxiv.org/pdf/1704.07926.pdf). The new algorithm guards against spurious programs by combining the systematic search traditionally employed in MML with the randomized exploration of RL, and by updating parameters such that probability is spread more evenly across consistent programs.
