@@ -1,7 +1,0 @@
----
-layout: post
-title:  "Yining AT AAAi19"
-preview: /assets/images/aaai.jpg
----
-
-2019 January.

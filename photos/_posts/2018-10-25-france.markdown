@@ -1,7 +1,0 @@
----
-layout: post
-title:  "Yining AT France"
-preview: /assets/images/france.jpg
----
-
-2016 July. 

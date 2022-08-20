@@ -1,7 +1,0 @@
----
-layout: post
-title:  "Yining AT Estonia"
-preview: /assets/images/estonia.jpg
----
-
-2016 August. Tallinn.

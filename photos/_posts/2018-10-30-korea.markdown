@@ -1,7 +1,0 @@
----
-layout: post
-title:  "Yining AT South Korea"
-preview: /assets/images/korea.jpg
----
-
-2017 January-February. Had some skiing lessons.
