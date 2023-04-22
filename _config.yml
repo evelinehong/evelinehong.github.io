@@ -21,3 +21,4 @@ gems:
   - jekyll-sitemap
 
 exclude: [README.md, Gemfile, Gemfile.lock, _site, Rakefile, travis.sh, vendor]
+future: true
