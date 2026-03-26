@@ -17,12 +17,53 @@
     --border-strong: rgba(255,255,255,0.14);
     --text: #e8e6df;
     --muted: #7a7870;
-    --accent1: #c8a96e;   /* warm gold — episodic */
-    --accent2: #7c9fbf;   /* cool steel — life */
-    --accent3: #8faa7c;   /* sage green — evolution */
+    --accent1: #c8a96e;
+    --accent2: #7c9fbf;
+    --accent3: #8faa7c;
     --serif: 'EB Garamond', Georgia, serif;
     --mono: 'DM Mono', monospace;
   }
+
+  html.light {
+    --bg: #f7f5f0;
+    --surface: #edeae3;
+    --surface2: #e4e0d8;
+    --border: rgba(0,0,0,0.08);
+    --border-strong: rgba(0,0,0,0.15);
+    --text: #1a1814;
+    --muted: #2a2820;
+    --accent1: #9a7a3a;
+    --accent2: #3d6e8f;
+    --accent3: #4e7240;
+  }
+
+  html.light .ref-authors,
+  html.light .ref-meta,
+  html.light .ref-desc,
+  html.light .nest-sub,
+  html.light .hero-eyebrow,
+  html.light .tagline,
+  html.light .ts-item,
+  html.light .nest-label { color: #2a2820 !important; }
+
+  .theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 24px;
+    z-index: 1000;
+    background: var(--surface2);
+    border: 1px solid var(--border-strong);
+    color: var(--muted);
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .theme-toggle:hover { color: var(--text); border-color: var(--text); }
 
   html { scroll-behavior: smooth; }
 
@@ -274,7 +315,7 @@
   .level-content p {
     margin-bottom: 18px;
     font-size: 1rem;
-    color: #ccc8bf;
+    color: var(--text);
     line-height: 1.8;
   }
 
@@ -425,6 +466,8 @@
 </style>
 </head>
 <body>
+
+<button class="theme-toggle" onclick="document.documentElement.classList.toggle('light'); this.textContent = document.documentElement.classList.contains('light') ? '◑ Dark' : '◑ Light'">◑ Light</button>
 
 <!-- ── HERO ── -->
 <section class="hero">
