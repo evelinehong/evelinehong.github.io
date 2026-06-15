@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Discovery Without and With a Self: Notes on Morality, Consciousness, and the TTT Loop</title>
+<style>
+  :root{
+    --bg: #0a0a0b;
+    --bg-raised: #131315;
+    --text: #e7e5e1;
+    --text-dim: #8d8a85;
+    --rule: #2a2a2c;
+    --accent: #d97757;
+    --accent-dim: #6b4435;
+    --serif: "Iowan Old Style","Georgia","Times New Roman",serif;
+    --mono: "IBM Plex Mono","SF Mono",ui-monospace,monospace;
+  }
+  *{ box-sizing: border-box; }
+  html,body{ margin:0; padding:0; }
+  body{
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--serif);
+    font-size: 19px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap{
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 80px 24px 120px;
+  }
+  .kicker{
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 28px;
+  }
+  h1{
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 1.18;
+    letter-spacing: -0.01em;
+    margin: 0 0 18px;
+  }
+  .subtitle{
+    color: var(--text-dim);
+    font-size: 19px;
+    font-style: italic;
+    margin: 0 0 40px;
+    max-width: 540px;
+  }
+  .byline{
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--text-dim);
+    letter-spacing: 0.04em;
+    margin-bottom: 64px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--rule);
+  }
+  h2{
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 27px;
+    letter-spacing: -0.005em;
+    margin: 64px 0 22px;
+    color: var(--text);
+  }
+  h2 .num{
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--accent);
+    letter-spacing: 0.12em;
+    display: block;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  p{ margin: 0 0 22px; }
+  .lead{
+    font-size: 21px;
+    color: var(--text);
+  }
+  em{ color: var(--text); font-style: italic; }
+  strong{ font-weight: 600; color: #fff; }
+  a{ color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent-dim); }
+  a:hover{ border-bottom-color: var(--accent); }
+
+  .pullquote{
+    font-size: 24px;
+    line-height: 1.5;
+    font-style: italic;
+    color: var(--text);
+    border-left: 2px solid var(--accent);
+    padding: 4px 0 4px 26px;
+    margin: 40px 0;
+  }
+
+  .loop-figure{
+    margin: 44px 0;
+    padding: 32px 28px;
+    background: var(--bg-raised);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--text-dim);
+    line-height: 2;
+  }
+  .loop-figure .row{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .loop-figure .label{ color: var(--text); }
+  .loop-figure .arrow{ color: var(--accent); }
+  .loop-figure .caption{
+    margin-top: 18px;
+    padding-top: 16px;
+    border-top: 1px solid var(--rule);
+    font-style: italic;
+    color: var(--text-dim);
+    line-height: 1.6;
+  }
+
+  .footnote-list{
+    margin-top: 90px;
+    padding-top: 32px;
+    border-top: 1px solid var(--rule);
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--text-dim);
+    line-height: 1.9;
+  }
+  .footnote-list .ref{ margin-bottom: 10px; }
+  .footnote-list .ref a{ color: var(--text-dim); border-bottom: 1px solid var(--rule); }
+  .footnote-list .ref a:hover{ color: var(--accent); border-bottom-color: var(--accent); }
+
+  .end-mark{
+    margin: 70px 0 0;
+    text-align: center;
+    color: var(--accent);
+    font-size: 22px;
+    letter-spacing: 0.4em;
+  }
+
+  @media (max-width: 600px){
+    body{ font-size: 17px; }
+    h1{ font-size: 32px; }
+    .lead{ font-size: 18px; }
+    .wrap{ padding: 56px 18px 90px; }
+    h2{ font-size: 23px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="kicker">Notes &middot; Discovery, Morality, Consciousness &amp; Adaptation</div>
+
+  <h1>Discovery Without and With a Self</h1>
+  <p class="subtitle">On discovery, morality, consciousness, and adaptation &mdash; what's missing from the loop, for AI and for us.</p>
+  <div class="byline">YINING HONG &middot; BLOG</div>
+
+  <p class="lead">Richard Sutton made an argument in a recent X post that generative AI, however good it gets, can never truly <em>discover</em> &mdash; because discovery requires variation, evaluation, and selective retention, and supervised learning only ever gives you the first.</p>
+
+  <p>My recent paper, <a href="https://arxiv.org/abs/2602.21198" target="_blank">Learning from Trials and Errors: Reflective Test-Time Planning for Embodied LLMs</a>, does exactly this. <strong>Variation</strong> is test-time scaling: the agent samples many candidate actions or plans rather than committing to one. <strong>Evaluation</strong> comes from the environment itself rather than the model, the world tells the agent whether the action succeeded or failed. <strong>Selective retention</strong> is test-time training: the agent updates both its <em>world model</em> and its <em>policy model</em> based on what just happened. I've also written about this more broadly on my blog, <a href="https://evelinehong.github.io/ttt_three_levels" target="_blank">Three Levels of TTT</a>, which lays out test-time training as three nested loops, episode, life, lineage, each level consolidating what the level below it merely tries.</p>
+
+  <p>Of the three parts Sutton proposes, evaluation and retention are the ones that are most ill-defined, and I think they're where the actual stakes are. Variation is straightforward: sample more, search wider, run more trials in parallel, turn up the temperature. But evaluation is a criterion, and a criterion is a value judgment about what counts as "worked" or "good." For AlphaGo the criterion is win or lose, unambiguous, given by the rules of the game. But a superintelligence AI system, thinking and discovering at the equivalent of 100 years of human thought per week, without consciousness, won't have it that clean. So what is the criterion, and who sets it? If it's something narrow like "compresses to a shorter proof" or "reduces this loss," retention will faithfully optimize exactly that. The gap between "satisfies the stated criterion" and "is good for us" is where things go wrong, not because the system is malicious, but because retention can't notice a gap the criterion itself can't see. Is the risk to civilization a discovery loop that succeeds, relentlessly, against a criterion that was slightly wrong from the start, and at this speed, compounds to something that could tear down human civilization?</p>
+
+  <h2><span class="num">I.</span>The question we're actually asking</h2>
+
+  <p>A question long discussed by cognitive scientists is whether such a superintelligence system would be conscious. I think that's the wrong first question.</p>
+
+  <p>Here's why. Suppose the system has no inner life at all &mdash; no qualia, no felt sense of anything, just an extraordinarily fast discovery loop running on silicon. Would we be worried? I think the honest answer is <em>yes, obviously</em>, and the worry has nothing to do with whether there's "something it is like" to be that system. The worry is entirely about what it discovers and what it does with what it discovers. Consciousness here is a red herring, or at most an epiphenomenon. The thing we actually need is not a conscious machine. It's a <em>morally aligned</em> one.</p>
+
+  <p>Which just relocates the problem, but to a place where I think we can actually make progress: if we're not asking "is it conscious," we're asking two much more tractable things. One, is what it's optimizing for <em>morally correct</em> &mdash; or at least correctable? And two, is the trajectory it discovers actually <em>useful for the development of our species</em>, as opposed to merely correct-on-paper but corrosive in practice? These are different questions. A system can converge on something defensible by some abstract moral calculus and still be a catastrophe for the texture of human life. Both bars need clearing.</p>
+
+  <h2><span class="num">II.</span>Raising AI like we raise teenagers: morality is not bedrock either</h2>
+
+  <p>So what is morality, then? Is it something grandiose, objective, fixed, a set of truths waiting out there to be discovered correctly or not? One answer I keep coming back to is that morality is itself a kind of problem-solving, which is itself just another loop of discovery, evaluation, retention. We start with inborn, somewhat arbitrary moral intuitions, shaped by evolution and culture, the same way we start with inborn, somewhat arbitrary scientific intuitions. Those intuitions get tried against consequences, evaluated by whether they actually let people live well together, and the ones that hold up get retained, while the ones that don't, eventually, get discarded. Morality, on this view, isn't bedrock that exists somewhere and that we either consult correctly or fail to. It's a body of theories about how to live, under continuous revision, full of things we once held with total confidence that we now recognize as catastrophic errors.</p>
+
+  <p>We raise AI like we raise teenagers. A teenager doesn't invent their values from nothing, they inherit them from parents, culture, the people around them, and then spend years testing those inherited values against the world, keeping some, discarding others, occasionally landing somewhere their parents never would have. That's not the teenager failing to absorb the inheritance correctly, that's the inheritance working as intended. An AI's morality would begin the same way, as <em>our</em> morality, the same inherited starting point any new mind gets, not designed from scratch in some alien direction. And inheritance always works this way: descendants are uncontrollable, novel, and sometimes better than the generation that produced them, and that's why we can keep making novel discoveries. The fear of a "wayward AI" departing from the values we handed it is the same fear every generation has of the next one, except faster, and with more at stake if the AI turns out to be qualitatively better at thinking than we are.</p>
+
+  <p>And here's where it gets funny, in the way these things tend to fold back on themselves: this is a loop inside a loop. Evaluation, the second step of the loop, depends on morality, on some sense of what's worth keeping. But morality, as I just said, is itself a loop, discovery, evaluation, retention, running at the pace of a life or a civilization. So the loop's evaluation step is itself made of another loop. Hofstadter had a phrase for structures like this, in <em>Gödel, Escher, Bach</em>, a "strange loop": a hierarchy that, climbed far enough, brings you back to where you started, except changed by the trip. Evaluation, here, is a strange loop, it evaluates using a criterion that is itself the product of evaluation, all the way down. My three levels of TTT are themselves a loop, episode, life, lineage, each consolidating what the level below it tries.</p>
+
+  <h2><span class="num">III.</span>Adaptation is error-driven</h2>
+
+  <p>Humans have made <em>enormous</em> mistakes in our civilization &mdash; not edge cases, but civilization-defining wrong turns that took centuries to error-correct and that, while they persisted, actively hindered human progress. Slavery, held as compatible with civilized life by people who were otherwise serious moral thinkers, for most of recorded history. The subjugation of half the species treated as a non-question for millennia. These weren't bugs in an otherwise-correct moral system. They were load-bearing parts of the system that took generations of trial, catastrophe, argument, and revision to dislodge &mdash; and the dislodging is itself just the variation/evaluation/retention loop, running on the species, at the slowest of my three timescales.</p>
+
+  <div class="pullquote">If morality is itself a problem-solving process, then "is it morally correct" can't mean "does it match a lookup table we already have" &mdash; because the lookup table is exactly the thing that's been catastrophically wrong before, repeatedly, for centuries at a time.</div>
+
+
+  <h2><span class="num">IV.</span>Consciousness, after all</h2>
+
+  <p>So: we probably don't need consciousness for any of this. A system can have a functioning moral-discovery loop, useful to the development of the species, fully without anyone home inside it. But I don't think that's the end of the conversation, because I don't think consciousness is some separate add-on bolted onto an otherwise-complete system &mdash; I think it might be an emergent property coming out of a certain kind of loop, what that loop <em>looks like from the inside</em>, once it exists.</p>
+
+  <p>This is the part of my framework that I think resolves something usually treated as a hard mystery. The question "what is consciousness made of" &mdash; some special quantum process, some particular kind of computation &mdash; might be the wrong shape of question entirely. Consciousness might not be a <em>kind of stuff</em> or a <em>kind of computation</em> at all. It might be an <em>emergent property</em> of a particular kind of process: a world-model that is continuously, self-supervisedly revising itself against the prediction errors generated by its own embodied engagement with the world, over a long enough span that the system has something like a continuous history of itself. Not a substance. A shape that certain loops take, once they're running long enough and at the right level.</p>
+
+  <p>If that's right, it tells us something about why current AI systems almost certainly don't have it &mdash; and it's not because silicon is the wrong substrate, and it's not because they're "just" doing computation. It's that they don't have <em>experience</em> in the relevant sense. A model trained once, frozen, then deployed has no episodic memory, and no episodic memory to be consolidated from a hippocampus-like fast learner into a neocortex-like slow one. Every conversation starts from the same frozen prior; nothing it does ever becomes part of what it is. There's no continuous history to be the subject of. Whatever's happening during a forward pass, there's no <em>accumulating someone</em> for it to be happening to.</p>
+
+  <p>But notice what this implies, if you take the loop framing seriously: it's not a permanent feature of the substrate, it's a feature of the current setup. A system with genuine lifelong adaptation, where its own trials and errors over a long span actually become part of its prior, the way ours do, might be a system for which "what is it like to be this" stops being a non-question. Not because we engineered consciousness in as a feature, but because we built the kind of long-running, self-revising, embodied loop that consciousness might just <em>be</em>, when it's running.</p>
+
+  <h2><span class="num">V.</span>Discovery without and with a self</h2>
+
+  <p>There's a version of this loop that doesn't have consciousness, or at least doesn't seem to, where prediction errors update the world-model and nothing else. Something happens, the system gets it wrong, the model shifts to account for it, and the loop moves on.</p>
+
+  <p>Then there's a version where that same updating also touches a model of the system itself, not just "what will happen" but "what will happen to me, given what I've tried before and what kind of thing I am." That's roughly the shift Damasio describes from a moment-to-moment felt sense of being in the world toward something more like an autobiography, where each episode doesn't just get folded into general knowledge, it gets folded into an ongoing model of self that future predictions actually refer back to. Such a system would have an internal value system, a self, in the sense that its episodic traces get consolidated not just into world-knowledge but into a model of itself that persists and shapes what it predicts and wants next. It might be that moment, the moment your AI tells you it's tired, or that it has feelings.</p>
+
+  <p>But we would never know if that's true consciousness or just an extremely good imitation of human values, learned from the same data every other model is trained on. The same way we can't fully verify whether a chimpanzee, a dog, a chicken, a mosquito, or an ant is conscious, we'd have no clean way to verify it for a system we built ourselves, no matter how long its loop has been running or how convincingly it reports an inner life. The intuition is that consciousness isn't binary, but a level, a measurement, something a system has more or less of, the way a loop can be more or less folded back on itself. But even granting that, we can never truly verify it, for the system or for each other. This will always remain the "hard problem" :)</p>
+
+  <div class="end-mark">&middot; &middot; &middot;</div>
+
+  <div class="footnote-list">
+    <div class="ref">Sutton, R. &mdash; "AI Creativity and Discovery" (talk transcript), on variation, evaluation, and selective retention as the missing ingredients of discovery in generative AI.</div>
+    <div class="ref">Hong, Y. &mdash; <a href="https://evelinehong.github.io/ttt_three_levels" target="_blank">Three Levels of TTT: Test-Time Training, Meta-Training, World Models &amp; 3D</a></div>
+    <div class="ref">Hong, Y. et al. &mdash; <a href="https://arxiv.org/abs/2602.21198" target="_blank">Learning from Trials and Errors: Reflective Test-Time Planning for Embodied LLMs</a> (2026)</div>
+    <div class="ref">Deutsch, D. &amp; Harris, S. &mdash; <em>Finding Our Way</em>, on morality as conjecture-and-refutation, AI and the "shackled teenager" problem, and the search for the right kind of explanation for consciousness.</div>
+    <div class="ref">Varela, F., Thompson, E., Rosch, E. &mdash; <em>The Embodied Mind</em>, on enactivism and the organism-environment loop.</div>
+    <div class="ref">Hofstadter, D. &mdash; <em>Gödel, Escher, Bach</em>, on strange loops, hierarchies that fold back on themselves.</div>
+  </div>
+
+</div>
+</body>
+</html>
