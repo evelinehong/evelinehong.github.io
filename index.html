@@ -18,6 +18,29 @@ title: Home
     position: relative;
   }
 }
+    .profile-nav {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    column-gap: 20px;
+    row-gap: 12px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .profile-nav li {
+    margin: 0;
+    padding: 0;
+  }
+
+  .profile-nav li::before {
+    content: "•";
+    margin-right: 7px;
+  }
+
+  .profile-nav .full-line {
+    grid-column: 1 / -1;
+  }
 </style>
 
 <header>
@@ -32,17 +55,25 @@ title: Home
   </p>
   <!-- <br><br> -->
 
-  <nav>
-    <ul>
-      <li><a href="https://scholar.google.com/citations?user=PTYxORcAAAAJ">Google Scholar</a></li>
-      <li><a href="https://twitter.com/yining_hong">Twitter</a></li>
-      <li><a href="#papers">Publications</a></li>
-      <li><a href="#music">As a Professional Musician</a></li>
-        <li><a href="https://github.com/evelinehong">Github</a></li>
-      <li><a href="#blog">Blogs</a></li>
-      <li><a href="mailto:yninghong@gmail.com">yninghong AT gmail DOT com</a></li>
-    </ul>
-  </nav>
+<nav>
+  <ul class="profile-nav">
+    <li><a href="https://scholar.google.com/citations?user=PTYxORcAAAAJ">Google Scholar</a></li>
+    <li><a href="https://twitter.com/yining_hong">Twitter</a></li>
+
+    <li><a href="#papers">Publications</a></li>
+    <li><a href="#awards">Awards & Honors</a></li>
+
+    <li><a href="#services">Academic Services</a></li>
+    <li><a href="#teaching">Teaching</a></li>
+
+    <li><a href="https://github.com/evelinehong">GitHub</a></li>
+    <li><a href="#blog">Blogs</a></li>
+
+    <li class="full-line"><a href="#music">As a Professional Musician</a></li>
+
+    <li class="full-line"><a href="mailto:yninghong@gmail.com">yninghong AT gmail DOT com</a></li>
+  </ul>
+</nav>
 </header>
 
 
@@ -500,46 +531,55 @@ title: Home
   </p>
 
 
+<p>
+<h2 id="awards">Awards & Honors</h2>
+
+<ul class="a">
+  <li>Best Paper Award Finalist (<b>Top 0.3%</b>), CoRL, 2026.</li>
+
+  <li>
+    Best Paper Award, CVPR Test-Time Scaling for Computer Vision Workshop, 2026.
+  </li>
+
+  <li>
+    <a href="https://postdocs.stanford.edu/current-postdocs/postdocs-champion-awards/2026">
+      Community Impact Award
+    </a>, Stanford, 2026.
+  </li>
+
+  <li>
+    <a href="https://e2e3d.github.io/rising_star.html">
+      Rising Star Award for Spatial Intelligence
+    </a>
+    (<b>$30,000 gift funding</b>), 2026.
+  </li>
+
+  <li>
+    Best Paper Award, CVPR Foundation Models Meet Embodied Agents Workshop, 2025.
+  </li>
+
+  <li>Two Sigma PhD Fellowship Award UCLA Internal Nomination, 2024.</li>
+
+  <li>CVPR PhD Consortium Award, 2024.</li>
+
+  <li>Rising Stars in Computational and Data Sciences, 2024.</li>
+
+  <li>Baidu Scholarship (<b>10 recipients worldwide</b>), 2022.</li>
+
+  <li>Snap Fellowship Honorable Mention, 2022.</li>
+
+  <li>
+    Best Paper Award, ICML Workshop on Bridge Between Perception and Reasoning:
+    Graph Neural Networks & Beyond, 2020.
+  </li>
+
+  <li>China National Scholarship (<b>Top 0.2%</b>), 2018.</li>
+</ul>
+</p>
+
+
   <p>
-    <h2>Awards & Honors</h2>
-
-    <ul class="a">
-      <li>
-        Best Paper Award Finalist (<b>Top 0.3%</b>), CoRL, 2026
-      </li>
-      
-      <li>
-        <a href="a href="https://postdocs.stanford.edu/current-postdocs/postdocs-champion-awards/2026">
-          Community Impact Award
-        </a>,
-        Stanford, 2026
-      </li>
-
-      <li>
-        <a href="https://e2e3d.github.io/rising_star.html">
-          Rising Star Award for Spatial Intelligence
-        </a>
-        (<b>$30,000 gift funding</b>), 2026
-      </li>
-
-      <li>Two Sigma PhD Fellowship Award UCLA Internal Nomination, 2024.</li>
-
-      <li>CVPR PhD Consortium Award, 2024.</li>
-
-      <li>Rising Stars in Computational and Data Sciences, 2024.</li>
-
-      <li>Baidu Scholarship (<b>10 recipients worldwide</b>), 2022.</li>
-
-      <li>Snap Fellowship Honorable Mention, 2022.</li>
-
-      <li>China National Scholarship (<b>Top 0.2%</b>), 2018.</li>
-
-    </ul>
-  </p>
-
-
-  <p>
-    <h2>Academic Services</h2>
+    <h2 id="Academic Services">Academic Services</h2>
 
     <a href="https://cvpr.thecvf.com/Conferences/2026/Organizers">
       Social Chair
@@ -556,15 +596,55 @@ title: Home
 
     Organizer, RSS Embodied4Arts: Robots as Creative Partners for Artistic, Expressive, and Craft Task<br>
 
+    Organizer, NeurIPS Physical World Model <br>
+
   </p>
 
 
   <p>
 
-    <!-- <h2>Invited Talks</h2>
+    
+<h2 id="teaching">Teaching Experience</h2>
+<ul class="a">
+  <li>
+    <strong>Fall 2021:</strong> CS 35L – Software Construction<br>
+    <em>Topics:</em> Software development tools and environments, Unix shell, C, Python, version control, and debugging.
+  </li>
+  <br>
+
+  <li>
+    <strong>Winter 2022:</strong> CS 188 – Special Topics in Computer Science: Computer Vision<br>
+    <em>Topics:</em> Image processing, feature extraction, recognition, and deep learning for computer vision.
+  </li>
+  <br>
+
+  <li>
+    <strong>Spring 2022:</strong> CS 130 – Software Engineering<br>
+    <em>Topics:</em> Software engineering principles, agile development, testing, design patterns, and team project management.
+  </li>
+  <br>
+
+  <li>
+    <strong>Spring 2023:</strong> CS 32 – Introduction to Computer Science II<br>
+    <em>Topics:</em> Object-oriented programming in C++, data structures (linked lists, stacks, queues, trees, hash tables), recursion, algorithms, and dynamic memory management.
+  </li>
+  <br>
+
+  <li>
+    <strong>Fall 2024:</strong> CS 31 – Introduction to Computer Science I<br>
+    <em>Topics:</em> Fundamental programming concepts in C++, control flow (if-else, loops), functions, arrays, C-strings and C++ strings, pointers, structs, classes, and basic dynamic allocation.
+  </li>
+</ul>
+<br>
+
+  
+    <h2>Invited Talks</h2>
 
     <ul>
-
+      <li>
+        2026/10 Invited talk at UIUC ML Seminar
+      </li>
+      
       <li>
         2025/07 Invited talk at Stanford Vision Seminar
       </li>
@@ -596,7 +676,7 @@ title: Home
     </ul>
 
   </p>
- -->
+
 
 
   <p>
