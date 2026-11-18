@@ -187,18 +187,22 @@ body header nav a:hover {
   color: inherit;
 }
 
-/* Override global Times New Roman rule for icons */
-html body .profile-nav .fa-solid {
+/* ===== Font Awesome icon fix ===== */
+
+html body .profile-nav .fa-solid,
+html body .profile-nav .fa-solid::before {
   font-family: "Font Awesome 6 Free" !important;
   font-weight: 900 !important;
 }
 
-html body .profile-nav .fa-regular {
+html body .profile-nav .fa-regular,
+html body .profile-nav .fa-regular::before {
   font-family: "Font Awesome 6 Free" !important;
   font-weight: 400 !important;
 }
 
-html body .profile-nav .fa-brands {
+html body .profile-nav .fa-brands,
+html body .profile-nav .fa-brands::before {
   font-family: "Font Awesome 6 Brands" !important;
   font-weight: 400 !important;
 }
