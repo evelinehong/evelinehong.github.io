@@ -5,47 +5,22 @@ title: Home
 
 
 <style>
-/* Keep the original theme layout and typography.
-   Only pin the existing left header on desktop. */
-@media screen and (min-width: 769px) {
-  header {
-    position: fixed;
-  }
+
+/* ===== Color palette ===== */
+
+:root {
+  --bg: #131316;
+  --text: #c2c2c8;
+  --heading: #e6e6e9;
+  --link: #b4a0f0;
+  --link-hover: #d0c4f8;
 }
 
-/* On mobile, put the header back above the content. */
-@media screen and (max-width: 768px) {
-  header {
-    position: relative;
-  }
-}
-    .profile-nav {
-    display: grid;
-    grid-template-columns: max-content max-content;
-    column-gap: 20px;
-    row-gap: 12px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .profile-nav li {
-    margin: 0;
-    padding: 0;
-  }
-
-  .profile-nav li::before {
-    content: "•";
-    margin-right: 7px;
-  }
-
-  .profile-nav .full-line {
-    grid-column: 1 / -1;
-  }
+/* ===== Uniform background ===== */
 
 html,
 body {
-  background: #131316 !important;
+  background: var(--bg) !important;
   background-image: none !important;
 }
 
@@ -57,29 +32,36 @@ footer {
   background: transparent !important;
   background-image: none !important;
 }
-  a, a:visited {
-  color: #b4a0f0 !important;
+
+/* ===== Typography ===== */
+
+html body,
+html body *,
+html body *::before,
+html body *::after {
+  font-family: "Times New Roman", Tinos, Times,
+               "Songti SC", STSong, SimSun, serif !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  letter-spacing: normal !important;
+  text-shadow: none !important;
 }
 
-a:hover, a:focus {
-  color: #d8c8ff !important;
+/* ===== Regular text ===== */
+
+body,
+body header,
+body section.content,
+body footer,
+body p,
+body ul,
+body li {
+  color: var(--text) !important;
+  font-weight: 400 !important;
 }
 
-  body, header, section, footer,
-p, li, h1, h2, h3, h4 {
-  font-family: "Times New Roman", Times, serif !important;
-  color: #c2c2c8 !important;
-}
+/* ===== Left sidebar font size ===== */
 
-h1, h2, h3, h4 {
-  color: #dedee3 !important;
-}
-
-strong, b {
-  color: #dedee3 !important;
-  font-weight: 600 !important;
-}
-/* Left sidebar */
 body header,
 body header p,
 body header li,
@@ -87,7 +69,8 @@ body header a {
   font-size: 16px !important;
 }
 
-/* Right-hand content, including publication titles */
+/* ===== Right content font size ===== */
+
 body section.content,
 body section.content p,
 body section.content ul,
@@ -97,11 +80,92 @@ body section.content strong,
 body section.content b {
   font-size: 17.5px !important;
 }
-  /* Titles and bold highlights */
-body h1, body h2, body h3, body h4,
-body strong, body b {
-  color: #e6e6e9 !important;
+
+/* ===== Headings and bold text ===== */
+
+body h1,
+body h2,
+body h3,
+body h4,
+body strong,
+body b {
+  color: var(--heading) !important;
+  font-weight: 700 !important;
 }
+
+/* ===== Links ===== */
+
+body a,
+body a:visited {
+  color: var(--link) !important;
+  font-weight: 400 !important;
+  text-decoration: underline !important;
+  text-decoration-color: rgba(180, 160, 240, 0.4) !important;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+body a:hover,
+body a:focus {
+  color: var(--link-hover) !important;
+  text-decoration-color: currentColor !important;
+}
+
+/* ===== Sidebar links ===== */
+
+body header nav a,
+body header nav a:visited {
+  color: var(--link) !important;
+  font-weight: 400 !important;
+  text-decoration: none !important;
+}
+
+body header nav a:hover {
+  color: var(--link-hover) !important;
+}
+
+/* ===== Fixed sidebar on desktop ===== */
+
+@media screen and (min-width: 769px) {
+  header {
+    position: fixed;
+  }
+}
+
+/* ===== Mobile layout ===== */
+
+@media screen and (max-width: 768px) {
+  header {
+    position: relative;
+  }
+}
+
+/* ===== Sidebar navigation ===== */
+
+.profile-nav {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  column-gap: 20px;
+  row-gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.profile-nav li {
+  margin: 0;
+  padding: 0;
+}
+
+.profile-nav li::before {
+  content: "•";
+  margin-right: 7px;
+}
+
+.profile-nav .full-line {
+  grid-column: 1 / -1;
+}
+
 </style>
 
 <header>
