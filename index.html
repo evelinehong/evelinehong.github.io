@@ -217,6 +217,82 @@ body section.content b {
   color: #e87cbe !important;
   font-weight: 700 !important;
 }
+
+  /* ===== Mobile responsive fix ===== */
+
+@media screen and (max-width: 768px) {
+
+  html {
+    width: 100%;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    margin: 24px 20px 0 !important;
+    width: auto !important;
+    min-width: 0 !important;
+  }
+
+  body header {
+    position: relative !important;
+    float: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+  }
+
+  body header img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  body section.content {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    box-sizing: border-box;
+    overflow-wrap: anywhere;
+  }
+
+  body section.content img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .profile-nav {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    column-gap: 12px;
+    row-gap: 12px;
+    width: 100%;
+  }
+
+  .profile-nav li {
+    min-width: 0;
+  }
+
+  .profile-nav a {
+    white-space: normal !important;
+    overflow-wrap: anywhere;
+  }
+
+  .profile-nav i {
+    flex-shrink: 0;
+  }
+
+  /* Keep the research diagram within the screen */
+  body section.content > div {
+    max-width: 100%;
+  }
+
+  body section.content > div[style*="display:flex"] > img {
+    min-width: 0;
+    flex-shrink: 1;
+    max-width: 28%;
+  }
+}
   
 </style>
 
