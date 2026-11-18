@@ -14,6 +14,7 @@ title: Home
   --heading: #e6e6e9;
   --link: #b4a0f0;
   --link-hover: #d0c4f8;
+  --award: #ff8f85;
 }
 
 /* ===== Uniform background ===== */
@@ -81,20 +82,27 @@ body section.content b {
   font-size: 18px !important;
 }
 
-/* ===== Headings and bold text ===== */
+/* ===== Headings and publication titles ===== */
 
 body h1,
 body h2,
 body h3,
 body h4,
-body strong,
-body b {
+body strong {
   color: var(--heading) !important;
   font-weight: 700 !important;
 }
 
-/* ===== Links ===== */
+/* ===== Pink awards, spotlights and distinctions ===== */
 
+body b,
+body section.content b,
+body section.content li b {
+  color: var(--award) !important;
+  font-weight: 700 !important;
+}
+
+/* ===== Links without underlines ===== */
 
 body a,
 body a:visited {
@@ -205,7 +213,7 @@ body header nav a:hover {
 <section class="content">
 
   <p>
-    <!-- <h2>About Me</h2> -->
+    <h2>About Me</h2>
 
     I am a postdoc at Stanford. I'm primarily advised by <a href="https://yejinc.github.io/">Prof. Yejin Choi</a> and <a href="https://profiles.stanford.edu/leonidas-guibas">Prof. Leonidas Guibas</a>, and working closely with <a href="https://jiajunwu.com/">Prof. Jiajun Wu</a> and <a href="https://profiles.stanford.edu/fei-fei-li">Prof. Fei-Fei Li</a>. I got my PhD degree in computer science at UCLA. I was fortunate to be co-advised by two of the best advisors in the world, <a href="http://www.stat.ucla.edu/~ywu/">Prof. Ying Nian Wu</a> and <a href="https://web.cs.ucla.edu/~kwchang/">Prof. Kai-Wei Chang</a>. I was also supervised by <a href="https://web.cs.ucla.edu/~sczhu/">Prof. Song-Chun Zhu</a> in my early PhD years. Previously, I was an undergraduate in the Department of Electrical Engineering in Shanghai Jiao Tong University, advised by Prof. Xinbing Wang and Prof. Weinan Zhang. I've been awarded Rising star for Spatial Intelligence ($30,000 gift funding), CoRL 2026 Best Paper Award Finalist, Rising star in Computational and Data Science, Baidu Scholarship and so on. I'm generally super grateful for all of my past and current advisors. <br>
     <br>
